@@ -1,0 +1,13 @@
+web:
+    image: deathwebo/nginx-php
+    volumes:
+        - .:/var/www
+    net: "host"
+    tty: true
+
+mysql:
+    image: centurylink/mysql:5.5
+    net: "host"
+    environment:
+        #MYSQL_USER: root
+        MYSQL_ROOT_PASSWORD: rootlocal
